@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+    function clicked()
+    {
+        alert("I was clicked");
+    }
+
+    function displayUsers()
+    {
+        var x = 0;
+        for(var user of users)
+        {
+            var row_style = x & 1 ? "#FFFFFF" : "#F0F0F0";
+            var markup = "<tr>" +
+                                "<td>" + user.firstName + "</td>" +
+                                "<td>" + user.lastName + "</td>" +
+                                "<td>" + user.age + "</td>" +
+                        "</tr>";
+            $("#users").find("tbody").append(markup);
+            $("#users").find("tbody").find("tr").last().attr("id", x);
+            $("#users").find("tbody").find("tr").last().attr("align","center");
+            $("#users").find("tbody").find("tr").last().css("background-color", row_style);
+            $("#users").find("tbody").find("tr").last().find("td").get(0).id = x + "_0";
+            $("#users").find("tbody").find("tr").last().find("td").get(1).id = x + "_1";
+            $("#users").find("tbody").find("tr").last().find("td").get(2).id = x + "_2";
+            ++x;
+        }
+        $("#0_1").bind('click',clicked);
+    }
+
+    function User(firstName,lastName,age)
+    {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+    }
+    
+    var users=[];
+    users.push(new User("John","Lennon",80), new User("Paul","McCartney",78), new User("George","Harrison",53), new User("Ringo","Starr",80));
+    $(document).ready(displayUsers);
+
+    </script>
+</head>
+<body>
+    <table id="users" width="50%" border="1">
+        <thead>
+            <tr style="background-color:#A0A0A0">
+                <th width="33%">First Name</th>
+                <th width="33%">Last Name</th>
+                <th width="33%">Age</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</body>
+</html>

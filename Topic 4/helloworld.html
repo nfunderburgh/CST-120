@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function sayHello()
+        {
+            /* Hello World JavaScript script that displays an alert window, display HTML in a div tag */
+            alert("hello world!");
+            document.getElementById("hello-text").innerHTML = "Hello world!";
+            console.log("Hello World!")
+        }
+    </script>
+</head>
+<body onload="sayHello()">
+    <!-- Display text before we start running JavaScript-->
+    <p>Before running JavaScript</p>
+
+    <!-- A Div tag so we display some text using JavaScript -->
+    <div id='hello-text'>
+        This is the default text
+    </div>
+
+    
+   
+
+    <!-- Display text after we are done running JavaScript -->
+    <p> After running JavaScript</p>
+</body>
+</html>

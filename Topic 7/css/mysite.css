@@ -1,0 +1,57 @@
+body { 
+    margin-top: 20px; 
+    margin-left: 20px; 
+    background: rgb(231,229,229);
+}
+
+h1 {
+    color: #000000; 
+    font-family: Arial; 
+    font-weight: bold; 
+    font-size: 32px; 
+    margin: 0 0 16px; 
+}
+
+h2 {
+    color: #4f2fb6; 
+    font-family: Arial; 
+    font-weight: bold; 
+    font-size: 28px; 
+    margin: 0 0 8px; 
+}
+
+h3 { 
+    color: #000000; 
+    font-family: Arial; 
+    font-weight: bold; 
+    font-size: 20px; 
+    margin: 0 0 8px; 
+}
+
+h4 {
+    color: #000000; 
+    font-family: Arial; 
+    font-weight: bold; 
+    font-size: 16px; 
+    margin: 0 0 8px; 
+}
+
+li { 
+    color:#000000; 
+    font-family: Arial; 
+    font-size: 16px; 
+    margin: 0 0 8px; 
+}
+
+p { 
+    font-family: Arial; 
+    font-size: 18px; 
+    margin: 16px 0 24px; 
+}
+
+a { 
+    font-family: Arial; 
+    color: rgb(221, 94, 20); 
+    text-align: center; 
+    text-decoration: none; 
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+    var User = 
+    {
+        firstName: "John",
+        lastName: "Lennon",
+        age: 80
+    };
+
+    function displayUser()
+    {
+        $("#fn").html(User.firstName);
+        $("#users").find("#ln").html(User.lastName);
+        $("#users").find("#age").html(User.age);
+    }
+
+    $(document).ready(displayUser);
+
+    </script>
+</head>
+<body>
+    <table id="users" width="50%" border="1">
+        <thead>
+            <tr>
+                <th width="33%">First Name</th>
+                <th width="33%">Last Name</th>
+                <th width="33%">Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr align="center">
+                <td id="fn">?</td>
+                <td id="ln">?</td>
+                <td id="age">?</td>
+            </tr>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

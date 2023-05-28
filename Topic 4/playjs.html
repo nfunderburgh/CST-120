@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function playjs() 
+        {
+            //VARIABLES and ASSIGNMENTS
+            var age = 60;
+            let name = 'Mark';
+            // Print Values
+            console.log("My name is " + name);
+            console.log("My age is " + age);
+            // MATH OPERATIONS
+            var number1 = 10;
+            var number2 = 5;
+            // Perform operations
+            var result = number1 + number2;
+            console.log("Addition result is " + result);
+            result = number1 - number2;
+            console.log("Subtraction result is " + result);
+            result = number1 * number2;
+            console.log("Multiplication result is " + result);
+            result = number1 / number2;
+            console.log("Division result is " + result);
+            ++number1;
+            console.log("Increment result is " + number1);
+            --number1;
+            console.log("Decrement result is " + number1);
+            result = number1 ** number2;
+            console.log("Exponentiation result is " + result);
+            // Preform some comparison operation
+            console.log("Equality for 10 is " + (number1==10));
+            console.log("Equality for 2 number " + (number1 == number2));
+            console.log("Equality for 2 numbers and type " + (number1 === number2));
+            console.log("Inequality for 2 numbers " + (number1 != number2));
+            console.log("Greater than for 2 numbers " + (number1 > number2));
+            console.log("Less than for 2 numbers " + (number1 < number2));
+            //STRINGS
+            //Basic Strings
+            let string1 = 'A string enclosed in Single Quotes';
+            console.log("String with single quotes " + string1);
+            let string2 = "A string enclosed in Single Quotes";
+            console.log("String with single quotes " + string2);
+            let string3 = 'A String \'\"\\ needs to be escaped';
+            console.log("String with escaped chars " + string3);
+            let string4 = 'A String \n on two lines';
+            console.log("String with newline " + string4);
+            // Common String Methods
+            let string5 = "Grand Canyon University";
+            console.log("String length is " + string5.length);
+            console.log("String in upper case is " + string5.toUpperCase());
+            console.log("String in lower case is " + string5.toLowerCase());
+            console.log("Search for Grand is at " + string5.indexOf('Grand'));
+            console.log("Search for Canyon is at " + string5.indexOf('Canyon'));
+
+            //NUMBERS
+            let numberStr = "1";
+            let numberNum = 1;
+            console.log("numberStr variable is of type " + (typeof numberStr));
+            console.log("numberNum variable is of type " + (typeof numberNUM));
+            console.log("Convert string to a number " + Number(numberStr));
+            console.log("Convert a number to a string " + numberNum.toString());
+            console.log("Convert boolean to a number " + Number(false));
+            console.log("Parse a int number string to a number " + parseInt("10"));
+            console.log("Parse a float number string to a number " + parseInt("10.5"));
+            console.log("Generate a random number " + Math.random());
+            //ARRAYS
+            //
+            let shapes1 = ['Triangle', 'Circle', 'Square'];
+            let shapes2 = new Array('Triangle', 'Circle', 'Square');
+            console.log("Last shape is " + shapes1[0]);
+            console.log("Last shape is " + shapes1[shapes1.length-1]);
+            //Common Array Methods
+            shapes1.sort();
+            console.log("First shape in sorted array is " + shapes1[0]);
+            console.log("Last shape in sorted array is " + shapes1[shapes1.length-1]);
+            shapes1.reverse();
+            console.log("First shape in reversed array is " + shapes1[0]);
+            console.log("Last shape in reversed array is " + shapes1[shapes1.length-1]);
+            shapes1.push('Rectangle');
+            console.log("Last shape in array is " + shapes1[shapes1.length-1]);
+            shapes1.pop();
+            console.log("Last shape in array is " + shapes1[shapes1.length-1]);
+            shapes1.splice(0, 0, 'Oval');
+            console.log("First shape in spliced array is " + shapes1[0]);
+            // Iteration
+            for(let shape of shapes1) {
+                console.log("The shape in " + shape);
+            }
+
+            //DATES and FUNCTIONS
+            let now = new Date();
+            let birthday = new Date(1969, 9, 17, 0, 0, 0);
+            console.log("Current date and time is " + now);
+            console.log("Past date and time is " + birthday);
+            console.log("Time difference is " + (now.getYear() - birthday.getYear()));
+            //FUNCTIONS
+            reusableCode();
+            result = add(15,20);
+            console.log(" Result is " + result);
+            result = multiply(15,20);
+            console.log(" Result is " + result);
+            shapes1.forEach(displayArray);
+
+            function reusableCode()
+            {
+                console.log("Called the resuableCode() function");
+            }
+            // Used to add 2 numbers together
+            function add(num1,num2) 
+            {
+                console.log("Adding number " + num1 + " and " + num2);
+                return num1 + num2;
+            }
+            // Function to multiply 2 number specified by the caller and can be reused in your application
+            function multiply(num1, num2)
+            {
+                console.log("Multiplying numbers " + num1 + " and " + num2)
+                return num1 * num2;
+            }
+            // Reusable function to display a value from an array ( can be used when using forEach() on an array )
+            function displayArray(value, index)
+            {
+                console.log("From displayArray() the array value in " + value + " at " + index);
+            }
+
+        }
+    </script>
+</head>
+<body onload="playjs()">
+    <p>Hello there!</p>
+</body>
+</html>  
